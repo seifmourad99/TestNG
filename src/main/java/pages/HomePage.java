@@ -10,30 +10,30 @@ public class HomePage {
     }
 
     //locators
-    private By signup=By.id("signin2");
-    private By login=By.xpath("//*[@id=\"login2\"]");
-    private By laptopsfield = By.xpath("//a[contains(text(), 'Laptop')]");
-    private By cartfield=By.xpath("//a[contains(text(), 'Cart')]");
+    private By SignUp=By.id("signin2");
+    private By Login=By.xpath("//a[@id='login2']");
+    private By LaptopsField = By.xpath("//a[contains(text(), 'Laptop')]");
+    private By CartField=By.xpath("//a[contains(text(), 'Cart')]");
 
 
 
 
     //actions
-    public SignupPage clickonsignuplink(){
-        driver.findElement(signup).click();
+    public SignupPage clickOnSignupLink(){
+        driver.findElement(SignUp).click();
         return new SignupPage(driver);
     }
-    public LoginPage clickonloginlink(){
-        driver.findElement(login).click();
+    public LoginPage clickonLoginLink(){
+        driver.findElement(Login).click();
         return  new LoginPage (driver);
     }
 
-    public  LaptopsfieldPage clickonlaptopsfieldlink(){
-        driver.findElement(laptopsfield).click();
+    public  LaptopsfieldPage clickOnLaptopsFieldLink(){
+        driver.findElement(LaptopsField).click();
         return  new LaptopsfieldPage(driver);
     }
-    public  CartPage clickoncartlink() {
-        driver.findElement(cartfield).click();
+    public  CartPage clickOnCartLink() {
+        driver.findElement(CartField).click();
         return new CartPage(driver);
     }
 

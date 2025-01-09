@@ -8,22 +8,22 @@ public class Laptop1page {
     public  Laptop1page(WebDriver driver)
     {this.driver=driver;}
     //locators
-    private By laptop1cartbutton = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
-    private By homebutton=By.cssSelector("#navbarExample > ul > li.nav-item.active > a");
+    private By Laptop1CartButton = By.xpath("//*[contains(@onclick,'8')]");
+    private By HomeButton=By.xpath("(//a[@class='nav-link'])[1]");
 
     //actions
-    public void clickonaddtocartbutton(){
-        driver.findElement(laptop1cartbutton).click();
+    public void clickOnAddToCartButton(){
+        driver.findElement(Laptop1CartButton).click();
     }
-    public String getaddproducttext() {
-       String text=driver.switchTo().alert().getText();
-       return text;
+    public String getAddProductText() {
+        String text=driver.switchTo().alert().getText();
+        return text;
     }
-    public void accept1alert(){
+    public void accept1Alert(){
         driver.switchTo().alert().accept();
     }
-    public HomePage clickonhomebtn(){
-        driver.findElement(homebutton).click();
+    public HomePage clickOnHomeBtn(){
+        driver.findElement(HomeButton).click();
         return new HomePage(driver);
     }
 }

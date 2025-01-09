@@ -10,24 +10,25 @@ public class LoginPage {
         this.driver = driver;
     }
 
-//locators
-private By insertusernamee = By.xpath("//input[@id='loginusername']");
-private By insertpasswordd = By.xpath("//input[@id='loginpassword']");
-private By loginbutton = By.xpath("//button[contains(text(), 'Log in')]");
-private By welcomeuser=By.xpath("//*[@id=\"nameofuser\"]");
+    //locators
+    private By InsertUsernamee = By.xpath("//input[@id='loginusername']");
+    private By InsertPasswordd = By.xpath("//input[@id='loginpassword']");
+    private By LoginButton = By.xpath("//button[contains(text(), 'Log in')]");
+    private By WelcomeUser=By.xpath("//*[@id=\"nameofuser\"]");
 
-//actions
-public void insertUsernamee(String username){
-    driver.findElement(insertusernamee).sendKeys(username);
-}
-    public void insertPasswordd(String password){ driver.findElement(insertpasswordd).sendKeys(password);
+    //actions
+    public void insertUsernamee(String username){
+        driver.findElement(InsertUsernamee).sendKeys(username);
     }
-    public void clickloginButton() {
-        driver.findElement(loginbutton).click();
+    public void insertPasswordd(String password){
+        driver.findElement(InsertPasswordd).sendKeys(password);
     }
-    public String getwelcomeusertext(){
-    String text = driver.findElement(welcomeuser).getText();
-    return text;
+    public void clickLoginButton() {
+        driver.findElement(LoginButton).click();
+    }
+    public String getWelcomeUserText(){
+        String text = driver.findElement(WelcomeUser).getText();
+        return text;
     }
 }
 

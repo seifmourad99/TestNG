@@ -10,40 +10,40 @@ public class PlaceorderPage {
     }
 
     //locators
-    private By insertpurchasenamefield = By.cssSelector("input[id=\"name\"]");
-    private By insertpurchasecountryfield= By.xpath("//*[@id=\"country\"]");
-    private By insertpurchasecityfield= By.xpath("//*[@id=\"city\"]");
-    private By insertpurchasecreditcardfield= By.xpath("//*[@id=\"card\"]");
-    private By insertpurchasemonthfield= By.xpath("//*[@id=\"month\"]");
-    private By insertpurchaseyearfield= By.xpath("//*[@id=\"year\"]");
-    private By purchasebutton= By.cssSelector("#orderModal > div > div > div.modal-footer > button.btn.btn-primary");
-    private By successpurchase= By.xpath("(//h2)[3]");
+    private By InsertPurchaseNameField = By.xpath("//input[@id='name']");
+    private By InsertPurchaseCountryField= By.xpath("//input[@id='country']");
+    private By InsertPurchaeCityField= By.xpath("//input[@id='city']");
+    private By InsertPurchaseCreditCardField= By.xpath("//input[@id='card']");
+    private By InsertPurchaseMonthField= By.xpath("//input[@id='month']");
+    private By InsertPurchaseYearField= By.xpath("//input[@id='year']");
+    private By PurchaseButton= By.xpath("//*[contains(@onclick,'purchase')]");
+    private By SuccessPurchase= By.xpath("(//h2)[3]");
 
     //actions
-    public void insertPurchasenamefield(String name){
-        driver.findElement(insertpurchasenamefield).sendKeys(name);
+    public void insertPurchaseNameField(String name){
+        driver.findElement(InsertPurchaseNameField).sendKeys(name);
     }
-    public void insertPurchasecountryfield(String country) {
-        driver.findElement(insertpurchasecountryfield).sendKeys(country);
+    public void insertPurchaseCountryField(String country) {
+        driver.findElement(InsertPurchaseCountryField).sendKeys(country);
     }
-    public void insertPurchasecityfield(String city){
-        driver.findElement(insertpurchasecityfield).sendKeys(city);
+    public void insertPurchaseCityField(String city){
+        driver.findElement(InsertPurchaeCityField).sendKeys(city);
     }
-    public void insertPurchasecreditcardfield(String creditcard){
-        driver.findElement(insertpurchasecreditcardfield).sendKeys(creditcard);
+    public void insertPurchaseCreditCardField(String creditcard){
+        driver.findElement(InsertPurchaseCreditCardField).sendKeys(creditcard);
     }
-    public void insertPurchasemonthfield(String month){
-        driver.findElement(insertpurchasemonthfield).sendKeys(month);
+    public void insertPurchaseMonthField(String month){
+        driver.findElement(InsertPurchaseMonthField).sendKeys(month);
     }
-    public void insertPurchaseyearfield(String year){
-        driver.findElement(insertpurchaseyearfield).sendKeys(year);
+    public void insertPurchaseYearField(String year){
+        driver.findElement(InsertPurchaseYearField).sendKeys(year);
     }
-    public void clickonPurchasebutoon() {
-        driver.findElement(purchasebutton).click();
+    public void purchaseButton() {
+        driver.findElement(PurchaseButton).click();
     }
 
-    public String getsuccessmessagetext(){
-        String text = driver.findElement(successpurchase).getText();
+    public String getSuccessMessageText(){
+        String text = driver.findElement(SuccessPurchase).getText();
         return text;
     }
 }

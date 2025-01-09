@@ -5,22 +5,30 @@ import org.openqa.selenium.WebDriver;
 
 public class Laptop2page {
     WebDriver driver;
-    public  Laptop2page(WebDriver driver)
-    {this.driver=driver;}
-    //locators
-    private By laptop2cartbutton = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
-    //actions
-    public void clickonaddtocartbutton(){
-        driver.findElement(laptop2cartbutton).click();
+
+    public Laptop2page(WebDriver driver) {
+        this.driver = driver;
     }
-    public String getaddproducttext() {
-        String text=driver.switchTo().alert().getText();
+
+    //locators
+    private By Laptop2CartButton = By.xpath("//a[@onclick='addToCart(9)']");
+    private By CartField = By.xpath("//a[contains(text(), 'Cart')]");
+
+    //actions
+    public void clickOnAddToCartButton2() {
+        driver.findElement(Laptop2CartButton).click();
+    }
+
+    public String getAddProductText() {
+        String text = driver.switchTo().alert().getText();
         return text;
     }
-    public void accept2alert(){
+
+    public void accept2Alert() {
         driver.switchTo().alert().accept();
     }
+
+
+
 }
-
-
 

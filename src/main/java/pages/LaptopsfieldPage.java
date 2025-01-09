@@ -8,19 +8,19 @@ public class LaptopsfieldPage {
     public LaptopsfieldPage(WebDriver driver) {
         this.driver=driver;}
 
-      //locators
-       private By laptop1 = By.xpath("//a[contains(text(), 'Sony vaio i5')]");
-       private  By laptop2 = By.xpath("//a[contains(text(), 'Sony vaio i7')]");
+    //locators
+    private By Laptop1 = By.xpath("//a[contains(text(), 'Sony vaio i5')]");
+    private  By Laptop2 = By.xpath("//a[contains(text(), 'Sony vaio i7')]");
 
-       //actions
+    //actions
 
-        public Laptop1page clickonproduct1page() {
-            driver.findElement(laptop1).click();
-            return new Laptop1page(driver);
-        }
-        public Laptop2page clickonproduct2page(){
-           driver.findElement(laptop2).click();
-           return new Laptop2page(driver);
-        }
+    public Laptop1page clickOnProduct1Page() {
+        driver.findElement(Laptop1).click();
+        return new Laptop1page(driver);
+    }
+    public Laptop2page clickOnProduct2Page(){
+        driver.findElement(Laptop2).click();
+        return new Laptop2page(driver);
+    }
 
 }
